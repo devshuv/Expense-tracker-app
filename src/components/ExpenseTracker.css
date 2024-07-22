@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Expense_tracker {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100vw;
+    background-color: azure;
+}
+
+.leftBox {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: -8%;
+    min-width: 300px;
+}
+
+.rightBox {
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    min-width: 300px;
+}
+
+.form-container {
+    width: 40%;
+    max-width: 400px;
+    background-color: rgba(83, 206, 46, 0.781);
+    margin-top: 6%;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(105, 128, 0, 0.467);
+}
+
+.details-container {
+    justify-content: space-between;
+    width: 45%;
+    max-width: 500px;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.add-details {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #00fff2;
+    margin-bottom: 20px;
+}
+
+.details_header {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #ff00c3;
+    height: 33px;
+    width: 100%;
+    padding-top: 2px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: rgb(135, 227, 235);
+    box-shadow: 0 0 10px rgba(33, 156, 154, 0.34);
+}
+
+.column {
+    flex: 1;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.debit-column{
+    width: 50%;
+    text-align: center;
+}
+.credit-column{
+    width: 50%;
+    text-align: center;
+}
+
+.button_box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    margin-left: -2%;
+}
+
+.button_box button {
+    flex: 1;
+    max-width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(46, 206, 46);
+    color: white;
+    margin: 5px;
+}
+
+.button_box button:hover {
+    background-color: rgb(99, 250, 242);
+    box-shadow: rgba(149, 255, 248, 0.489);
+}
+
+.input_box p {
+    margin-bottom: 15px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    background-color: #444444;
+    color: white;
+}
+
+label {
+    font-size: 1rem;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #fff700;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+}
+
+h4 {
+    font-weight: bolder;
+}
+
+.detail-item {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.debit-item {
+    background-color: red;
+    color: white;
+}
+
+.credit-item {
+    background-color: yellow;
+    color: black;
+}
+
+.detail-item p {
+    margin: 5px 0;
+}
+
+.detail-item button {
+    background-color: #dc3545;
+    margin-top: 10px;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.detail-item button:hover {
+    background-color: #c82333;
+}
+
+.totals-container {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 12%;
+}
+
+.totals {
+    width:85%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.total-debit, .total-credit, .balance {
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+}
+
+.total-debit {
+    background-color: rgba(255, 102, 0, 0.982);
+}
+
+.total-credit {
+    background-color: rgb(27, 158, 1);
+}
+
+.balance {
+    background-color: yellow;
+    color: black;
+    font-weight: bolder;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 620px) {
+    .leftBox, .rightBox {
+        width: 100vw;
+        margin-left: 0;
+    }
+
+    .form-container{
+       width: 70%; 
+    } 
+
+    .details-container, .totals-container {
+        width: 90%;
+        margin-left: 0;
+    }
+
+    .details-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .column {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .details-container {
+        order: 1;
+    }
+
+    .totals-container {
+        margin-top: 20px;
+        order: 2;
+    }
+ 
+}
